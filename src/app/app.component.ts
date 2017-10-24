@@ -12,6 +12,7 @@ export class AppComponent {
     firstName : 'John',
   lastName : 'Woo'
   };
+  dataFromChild;
 
   section = 'this is section';
 
@@ -19,4 +20,10 @@ export class AppComponent {
    name: 'Mister1',
    surname: 'Smith1'
  };
+  nameFromRoot(e) {
+    this.dataFromChild = e;
+  }
+  alertData() {
+    alert(this.dataFromChild);
+  }
 }

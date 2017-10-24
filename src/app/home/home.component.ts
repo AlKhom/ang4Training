@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,7 @@ import {Component, OnInit, Input} from '@angular/core';
 export class HomeComponent implements OnInit {
   @Input() user;
   @Input() person23;
+  @Output() hereNameFromHome = new EventEmitter();
 
 
     homeTitle  = 'Welcome to home page';
@@ -17,7 +18,9 @@ export class HomeComponent implements OnInit {
   alertMe(val) {
     alert(val);
   }
-
+  someFunctionInHome(e) {
+    this.hereNameFromHome.emit(e);
+  }
   constructor() { }
 
   ngOnInit() {
