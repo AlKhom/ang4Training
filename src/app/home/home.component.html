@@ -1,0 +1,14 @@
+<!--<ng-content></ng-content>-->
+<p>
+  {{homeTitle}}
+</p>
+<input type="text" [value]="myString">
+<input type="text " [attr.required]='ifRequire'>
+<button (click)="alertMe(myString)">Click me</button>
+
+<input type="text" [(ngModel)] = 'user.name'>
+<p>{{user.name}}</p>
+<p>{{user.surname}}</p>
+<p>{{person23.lastName}}</p>
+<p>{{person23.firstName}}</p>
+<button (click)="fireYellEmit($event)">ClickToEvent</button>
