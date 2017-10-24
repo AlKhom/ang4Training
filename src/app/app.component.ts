@@ -19,7 +19,4 @@ export class AppComponent {
    name: 'Mister1',
    surname: 'Smith1'
  };
- yell(e) {
-   alert('getSomeData');
- }
 }
