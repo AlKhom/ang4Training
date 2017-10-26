@@ -4,7 +4,7 @@ import {TryInputComponent} from "./try-input/try-input.component";
 import {RouterModule} from "@angular/router";
 
 const APP_ROUTER = [
-  { path: 'direc', component: DirectoryComponent},
+  { path: 'direc/:ninja', component: DirectoryComponent},
   {path : '', component: HomeComponent},
   {path: 'try', component: TryInputComponent}
 ];
