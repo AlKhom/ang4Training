@@ -27,8 +27,9 @@
   <p>Here some data from home: {{dataFromChild}}</p>
   <nav>
     <ul>
-      <li>link1</li>
-      <li>link2</li>
+      <li><a [routerLink]="['/']">Home</a>  </li>
+      <li><a [routerLink]="['/direc']">Directory</a></li>
+      <li><a [routerLink]="['/try']">Try</a></li>
     </ul>
   </nav>
   <button (click)="alertData()">ShowData</button>
