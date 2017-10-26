@@ -28,13 +28,13 @@
   <nav>
     <ul>
       <li><a [routerLink]="['/']">Home</a>  </li>
-      <li><a [routerLink]="['/direc']">Directory</a></li>
+      <li><a [routerLink]="['/directory']">Directory</a></li>
       <li><a [routerLink]="['/try']">Try</a></li>
     </ul>
   </nav>
   <!--<button (click)="alertData()">ShowData</button>-->
 </header>
-<section>
+<section id="main">
   <!--<app-home [user]="user" [person23]="person12" (hereNameFromHome)="nameFromRoot($event)">this is content from app home</app-home>-->
 <router-outlet></router-outlet>
  </section>

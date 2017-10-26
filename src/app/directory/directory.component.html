@@ -1,4 +1,21 @@
-<p>
+<p [ngClass]="classes">
   directory works!
 </p>
-<p>{{ninja}}</p>
+
+<p *ngIf=test>This is test</p>
+<button (click)="change()">Click</button>
+
+<style>
+  .blue {
+    color: blue;
+  }
+
+  .red {
+    color: red
+  }
+
+  .underline {
+    text-decoration: underline
+  }
+
+</style>

@@ -7,11 +7,13 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./directory.component.css']
 })
 export class DirectoryComponent implements OnInit {
-ninja: string;
-  constructor(private route: ActivatedRoute) {
-    this.ninja = route.snapshot.params['ninja'];
-  }
+classes = {'blue': false, 'red': true, 'underline': false};
+test = true;
 
+change() {
+  this.test ? this.test = false : this.test = true;
+}
+constructor() {}
   ngOnInit() {
   }
 
