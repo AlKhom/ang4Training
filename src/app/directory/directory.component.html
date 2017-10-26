@@ -1,9 +1,27 @@
-<p [ngClass]="classes">
-  directory works!
-</p>
+<!--<p [ngClass]="classes">-->
+  <!--directory works!-->
+<!--</p>-->
+<h2>Car listing</h2>
 
-<p *ngIf=test>This is test</p>
-<button (click)="change()">Click</button>
+<ul id="ninja-listing">
+  <li *ngFor="let car of cars">
+<div class="single-ninja">
+  <span> {{car.model}}</span>
+<span [ngStyle]="{background : car.color}">{{car.color}} color</span>
+
+
+
+
+
+</div>
+  </li>
+</ul>
+
+
+
+
+<!--<p *ngIf=test>This is test</p>-->
+<!--<button (click)="change()">Click</button>-->
 
 <style>
   .blue {

@@ -8,11 +8,17 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class DirectoryComponent implements OnInit {
 classes = {'blue': false, 'red': true, 'underline': false};
-test = true;
 
-change() {
-  this.test ? this.test = false : this.test = true;
-}
+  cars= [
+    {model: 'toyota', color: 'blue'},
+    {model: 'ford', color: 'red'},
+    {model: 'fiat', color: 'grey'}
+  ]
+// test = true;
+//
+// change() {
+//   this.test ? this.test = false : this.test = true;
+// }
 constructor() {}
   ngOnInit() {
   }
