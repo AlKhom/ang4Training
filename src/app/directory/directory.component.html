@@ -6,8 +6,8 @@
 <ul id="ninja-listing">
   <li *ngFor="let car of cars">
 <div class="single-ninja">
-  <span> {{car.model}}</span>
-<span [ngStyle]="{background : car.color}">{{car.color}} color</span>
+  <span> {{car.model | uppercase | slice:0:3}}  </span>
+<span [ngStyle]="{background : car.color}">{{car.color }} color</span>
 
 
 
