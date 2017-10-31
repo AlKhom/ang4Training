@@ -7,12 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { TryInputComponent } from './try-input/try-input.component';
 import {APP_ROUTE_PROVIDER} from "./app.routes";
 import {DirectoryComponent} from "./directory/directory.component";
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TryInputComponent, DirectoryComponent
+    TryInputComponent, DirectoryComponent, FilterPipe
   ],
   imports: [
     BrowserModule,

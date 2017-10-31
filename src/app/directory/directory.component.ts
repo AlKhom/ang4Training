@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+// import {FilterPipe} from '../filter.pipe';
 
 @Component({
   selector: 'app-directory',
@@ -8,7 +9,6 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class DirectoryComponent implements OnInit {
 classes = {'blue': false, 'red': true, 'underline': false};
-
   cars= [
     {model: 'toyota', color: 'blue'},
     {model: 'ford', color: 'red'},

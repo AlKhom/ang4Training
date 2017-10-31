@@ -2,11 +2,15 @@
   <!--directory works!-->
 <!--</p>-->
 <h2>Car listing</h2>
+<form id="filter">
+  <label> Filter cars by model:</label>
+  <input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}">
+</form>
 
 <ul id="ninja-listing">
-  <li *ngFor="let car of cars">
+  <li *ngFor="let car of cars | filter:term">
 <div class="single-ninja">
-  <span> {{car.model | uppercase | slice:0:3}}  </span>
+  <span> {{car.model}}  </span>
 <span [ngStyle]="{background : car.color}">{{car.color }} color</span>
 
 
