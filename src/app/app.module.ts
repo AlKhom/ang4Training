@@ -8,6 +8,7 @@ import { TryInputComponent } from './try-input/try-input.component';
 import {APP_ROUTE_PROVIDER} from "./app.routes";
 import {DirectoryComponent} from "./directory/directory.component";
 import { FilterPipe } from './filter.pipe';
+import {LoggingService} from "./logging.service";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { FilterPipe } from './filter.pipe';
     BrowserModule,
     FormsModule, APP_ROUTE_PROVIDER
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

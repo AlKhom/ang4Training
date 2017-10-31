@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 // import {FilterPipe} from '../filter.pipe';
+import {LoggingService} from "../logging.service";
 
 @Component({
   selector: 'app-directory',
@@ -19,7 +20,11 @@ classes = {'blue': false, 'red': true, 'underline': false};
 // change() {
 //   this.test ? this.test = false : this.test = true;
 // }
-constructor() {}
+constructor(private logger: LoggingService) {}
+logIt() {
+    this.logger.log();
+}
+
   ngOnInit() {
   }
 
