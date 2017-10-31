@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 // import {FilterPipe} from '../filter.pipe';
 import {LoggingService} from "../logging.service";
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-directory',
@@ -10,22 +11,21 @@ import {LoggingService} from "../logging.service";
 })
 export class DirectoryComponent implements OnInit {
 classes = {'blue': false, 'red': true, 'underline': false};
-  cars= [
-    {model: 'toyota', color: 'blue'},
-    {model: 'ford', color: 'red'},
-    {model: 'fiat', color: 'grey'}
-  ]
+  cars= [];
 // test = true;
 //
 // change() {
 //   this.test ? this.test = false : this.test = true;
 // }
-constructor(private logger: LoggingService) {}
+constructor(private logger: LoggingService, private dataService: DataService) {}
+
 logIt() {
     this.logger.log();
 }
 
   ngOnInit() {
+    console.log('hello');
+    this.dataService.fetchData();
   }
 
 }

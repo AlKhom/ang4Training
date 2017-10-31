@@ -1,0 +1,18 @@
+[
+  {
+    "model": "toyota",
+    "color": "blue"
+  },
+  {
+    "model": "ford",
+    "color": "red"
+  },
+  {
+    "model": "fiat",
+    "color": "grey"
+  },
+  {
+    "model": "bmv",
+    "color": "black"
+  }
+]

@@ -9,6 +9,9 @@ import {APP_ROUTE_PROVIDER} from "./app.routes";
 import {DirectoryComponent} from "./directory/directory.component";
 import { FilterPipe } from './filter.pipe';
 import {LoggingService} from "./logging.service";
+import {DataService} from "./data.service";
+// import {HttpModule} from "@angular/http";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -18,9 +21,9 @@ import {LoggingService} from "./logging.service";
   ],
   imports: [
     BrowserModule,
-    FormsModule, APP_ROUTE_PROVIDER
+    FormsModule, APP_ROUTE_PROVIDER, HttpModule
   ],
-  providers: [LoggingService],
+  providers: [LoggingService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
