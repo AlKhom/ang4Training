@@ -8,23 +8,9 @@ export class DataService {
 
   constructor(private http: Http) { }
 
-  // fetchData() {
-  //   console.log('fetch');
-  //   return this.http.get('/cars.json').subscribe(
-  //     (data) => console.log('Hi')
-  //   );
-  // }
-
-  // fetchData () {
-  //   this.http.get('/cars.json').map(
-  //     (res) => res.json()
-  //   ).subscribe(
-  //     (data) => console.log(data)
-  //   );
-  // }
  numbers  = 1;
   fetchData () {
-    return this.http.get('./assets/cars.json').map(
+    return this.http.get('https://angular4tutorial-fc1b2.firebaseio.com/.json').map(
       (res) => res.json()
     );
   }
