@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-try-input',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./try-input.component.css']
 })
 export class TryInputComponent implements OnInit {
+numbers;
+  constructor(private dataService: DataService ) { }
 
-  constructor() { }
+
+
 
   ngOnInit() {
+    this.numbers = this.dataService.getData();
+  }
+  sendNumber() {
+    this.dataService.setData(this.numbers);
   }
 
 }

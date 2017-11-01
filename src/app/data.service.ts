@@ -22,11 +22,19 @@ export class DataService {
   //     (data) => console.log(data)
   //   );
   // }
-
+ numbers  = 1;
   fetchData () {
-    this.http.get('/cars.json').subscribe(
-      (data) => console.log(data)
+    return this.http.get('./assets/cars.json').map(
+      (res) => res.json()
     );
   }
+
+  getData() {
+    return this.numbers;
+  }
+  setData(value) {
+    this.numbers = value;
+  }
+
 
 }

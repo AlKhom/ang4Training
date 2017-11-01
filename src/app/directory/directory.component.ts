@@ -12,6 +12,7 @@ import {DataService} from "../data.service";
 export class DirectoryComponent implements OnInit {
 classes = {'blue': false, 'red': true, 'underline': false};
   cars= [];
+  numbers;
 // test = true;
 //
 // change() {
@@ -24,8 +25,12 @@ logIt() {
 }
 
   ngOnInit() {
-    console.log('hello');
-    this.dataService.fetchData();
+    this.dataService.fetchData().subscribe(
+      (data) => this.cars = data
+    );
+    this.numbers = this.dataService.getData();
   }
-
-}
+  sendNumber() {
+  this.dataService.setData(this.numbers);
+  }
+  }
