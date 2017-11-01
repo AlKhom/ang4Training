@@ -10,9 +10,9 @@ export class DataService {
 
  numbers  = 1;
   fetchData () {
-    return this.http.get('https://angular4tutorial-fc1b2.firebaseio.com/.json').map(
-      (res) => res.json()
-    );
+    // return this.http.get('https://angular4tutorial-fc1b2.firebaseio.com/.json').map(
+    //   (res) => res.json()
+    // );
   }
 
   getData() {

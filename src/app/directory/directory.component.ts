@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 // import {FilterPipe} from '../filter.pipe';
 import {LoggingService} from "../logging.service";
 import {DataService} from "../data.service";
+declare var firebase
 
 @Component({
   selector: 'app-directory',
@@ -25,12 +26,21 @@ logIt() {
 }
 
   ngOnInit() {
-    this.dataService.fetchData().subscribe(
-      (data) => this.cars = data
-    );
-    this.numbers = this.dataService.getData();
-  }
+    // this.dataService.fetchData().subscribe(
+    //   (data) => this.cars = data
+    // );
+    // this.numbers = this.dataService.getData();
+    this.fbFetData();
+}
   sendNumber() {
   this.dataService.setData(this.numbers);
   }
+
+
+  fbFetData() {
+  firebase.database().ref('/').on('child_added', (snapshot) => {
+    this.cars.push(snapshot.val());
+  });
+  }
+
   }

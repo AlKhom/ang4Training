@@ -7,6 +7,20 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAJkaFBYq86fl2x4ucidNqoRirbGaGL4MM",
+      authDomain: "angular4tutorial-fc1b2.firebaseapp.com",
+      databaseURL: "https://angular4tutorial-fc1b2.firebaseio.com",
+      projectId: "angular4tutorial-fc1b2",
+      storageBucket: "angular4tutorial-fc1b2.appspot.com",
+      messagingSenderId: "767701763365"
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
 <body>
   <app-root></app-root>
